@@ -16,10 +16,22 @@
     <script src="parallax.js" defer></script>
   </head>
   <body>
-    <header class="header">
-      <nav>
-        <div class="header__logo"></div>
-      </nav>
+    <aside class="container">
+      <div class="scrollbar"></div>
+    </aside>
+    <header class="header container">
+      <div class="menu">
+        <div class="menu__logo menu__link hline">Mountains</div>
+        <nav class="menu__items">
+          <div class="menu__item menu__link">Dombai</div>
+          <div class="menu__item menu__link">Arkhyz</div>
+          <div class="menu__item menu__link">Elbrus</div>
+        </nav>
+        <nav class="menu__profile menu__link">
+          <img class="menu__icon" src="src/img/cart.png" alt="account-icon" />
+          Account
+        </nav>
+      </div>
     </header>
     <div class="parallax main">
       <div
@@ -31,7 +43,7 @@
       >
         <div class="headline__label">
           <div class="headline__label-line"></div>
-          <span class="headline__label-text">dombay 2022</span>
+          <span class="headline__label-text">Dombai 2022</span>
         </div>
         <h1 class="headline__main">
           Once you have been to the mountains, you can never live without them
@@ -83,124 +95,125 @@
     </div>
 
     <div class="content">
-  
-        <div class="content__container container">
-          <div class="content__block">
-            <div class="content__block-item content__photo">
-              <img class="content__img" src="src/img/img_01.jpg" alt="" />
-            </div>
-            <div class="content__block-item content__info">
-              <div class="content__number">01</div>
-              <div class="headline">
-                <div class="headline__label">
-                  <div class="headline__label-line"></div>
-                  <span class="headline__label-text">Lorem ipsum dolor</span>
-                </div>
-                <h2 class="headline__main">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Maiores, officiis!
-                </h2>
-              </div>
-              <p class="paragraph">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-                quibusdam magni expedita veritatis commodi harum modi
-                consequuntur, illo delectus non tenetur, obcaecati nemo minima
-                similique optio provident cumque ipsum. Consequuntur rem nisi
-                similique nihil odit, ratione quibusdam ea quia, dicta quaerat
-                voluptates velit quisquam delectus facere nulla distinctio rerum
-                ut quo fugiat officia. Quas quasi obcaecati ab. Est ipsa placeat
-                tempore culpa debitis adipisci, aperiam aliquid sequi fugiat.
-                Dolore voluptatibus sed cumque nihil, eligendi excepturi fuga
-                nam ducimus ea corporis neque repellendus magni iure, placeat,
-                minima modi autem iusto. Illo delectus odio temporibus doloribus
-                quo adipisci aspernatur nostrum eligendi officiis!
-              </p>
-              <span class="headline__label content__link">
-                <span class="headline__label-link">read more</span>
-                <div class="arrow">
-                  <div class="arrow__mid"></div>
-                  <div class="arrow__left-side"></div>
-                  <div class="arrow__right-side"></div>
-                </div>
-              </span>
-            </div>
+      <div class="content__container container">
+        <div class="content__block">
+          <div class="content__block-item content__photo">
+            <img class="content__img" src="src/img/img_01.jpg" alt="" />
           </div>
-
-          <div class="content__block">
-            <div class="content__block-item content__photo">
-              <img class="content__img" src="src/img/img_02.jpg" alt="" />
-            </div>
-            <div class="content__block-item content__info">
-              <div class="content__number">02</div>
-              <div class="headline">
-                <div class="headline__label">
-                  <div class="headline__label-line"></div>
-                  <span class="headline__label-text">Lorem ipsum dolor</span>
-                </div>
-                <h2 class="headline__main">
-                  Lorem ipsum dolor sit amet consectetur.
-                </h2>
+          <div class="content__block-item content__info">
+            <div class="content__number">01</div>
+            <div class="headline">
+              <div class="headline__label">
+                <div class="headline__label-line"></div>
+                <span class="headline__label-text">Lorem</span>
               </div>
-              <p class="paragraph">
+              <h2 class="headline__main">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Maiores, officiis!
+              </h2>
+            </div>
+            <p class="paragraph">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+              quibusdam magni expedita veritatis commodi harum modi
+              consequuntur, illo delectus non tenetur, obcaecati nemo minima
+              similique optio provident cumque ipsum. Consequuntur rem nisi
+              similique nihil odit, ratione quibusdam ea quia, dicta quaerat
+              voluptates velit quisquam delectus facere nulla distinctio rerum
+              ut quo fugiat officia. Quas quasi obcaecati ab. Est ipsa placeat
+              tempore culpa debitis adipisci, aperiam aliquid sequi fugiat.
+              Dolore voluptatibus sed cumque nihil, eligendi excepturi fuga nam
+              ducimus ea corporis neque repellendus magni iure, placeat, minima
+              modi autem iusto. Illo delectus odio temporibus doloribus quo
+              adipisci aspernatur nostrum eligendi officiis!
+            </p>
+            <span class="headline__label content__link">
+              <span class="headline__label-link">read more</span>
+              <div class="arrow">
+                <div class="arrow__mid"></div>
+                <div class="arrow__left-side"></div>
+                <div class="arrow__right-side"></div>
+              </div>
+            </span>
+          </div>
+        </div>
+
+        <div class="content__block">
+          <div class="content__block-item content__photo">
+            <img class="content__img" src="src/img/img_02.jpg" alt="" />
+          </div>
+          <div class="content__block-item content__info">
+            <div class="content__number">02</div>
+            <div class="headline">
+              <div class="headline__label">
+                <div class="headline__label-line"></div>
+                <span class="headline__label-text">Lorem ipsum dolor</span>
+              </div>
+              <h2 class="headline__main">
+                Lorem ipsum dolor sit amet consectetur.
+              </h2>
+            </div>
+            <p class="paragraph">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequuntur pariatur eos tenetur unde? Voluptates, quo minus.
+              Iusto laborum unde quas officiis rem numquam et, delectus, saepe
+              nemo provident voluptatibus? Cum porro harum neque hic quo dolores
+              cupiditate asperiores sapiente? Beatae fugit dolor mollitia
+              voluptate maxime itaque, doloribus et odit vitae molestias, amet
+              accusamus aperiam illum, at quas laudantium. Itaque officiis,
+              voluptatibus modi magni quidem, distinctio dolore iste aliquam
+              eius ab adipisci sed dolor nam reiciendis ducimus tempora, ut
+              consequatur velit.
+            </p>
+            <span class="headline__label content__link">
+              <span class="headline__label-link">read more</span>
+              <div class="arrow">
+                <div class="arrow__mid"></div>
+                <div class="arrow__left-side"></div>
+                <div class="arrow__right-side"></div>
+              </div>
+            </span>
+          </div>
+        </div>
+
+        <div class="content__block">
+          <div class="content__block-item content__photo">
+            <img class="content__img" src="src/img/img_03.jpg" alt="" />
+          </div>
+          <div class="content__block-item content__info">
+            <div class="content__number">03</div>
+            <div class="headline">
+              <div class="headline__label">
+                <div class="headline__label-line"></div>
+                <span class="headline__label-text">Lorem ipsum</span>
+              </div>
+              <h2 class="headline__main">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consequuntur pariatur eos tenetur unde? Voluptates, quo minus.
-                Iusto laborum unde quas officiis rem numquam et, delectus, saepe
-                nemo provident voluptatibus? Cum porro harum neque hic quo
-                dolores cupiditate asperiores sapiente? Beatae fugit dolor
-                mollitia voluptate maxime itaque, doloribus et odit vitae
-                molestias, amet accusamus aperiam illum, at quas laudantium.
-                Itaque officiis, voluptatibus modi magni quidem, distinctio
-                dolore iste aliquam eius ab adipisci sed dolor nam reiciendis
-                ducimus tempora, ut consequatur velit.
-              </p>
-              <span class="headline__label content__link">
-                <span class="headline__label-link">read more</span>
-                <div class="arrow">
-                  <div class="arrow__mid"></div>
-                  <div class="arrow__left-side"></div>
-                  <div class="arrow__right-side"></div>
-                </div>
-              </span>
+              </h2>
             </div>
-          </div>
-
-          <div class="content__block">
-            <div class="content__block-item content__photo">
-              <img class="content__img" src="src/img/img_03.jpg" alt="" />
-            </div>
-            <div class="content__block-item content__info">
-              <div class="content__number">03</div>
-              <div class="headline">
-                <div class="headline__label">
-                  <div class="headline__label-line"></div>
-                  <span class="headline__label-text">Lorem ipsum dolor</span>
-                </div>
-                <h2 class="headline__main">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </h2>
+            <p class="paragraph">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore,
+              natus porro commodi architecto incidunt repudiandae aliquid
+              nostrum. Repellat eveniet impedit inventore facilis quas iusto
+              eaque. Animi cumque nam rerum aliquam iusto dolorem id placeat
+              beatae maxime accusamus esse quisquam provident ea unde veritatis
+              quod accusantium assumenda sapiente, quidem iste molestiae
+              laudantium eius, laboriosam expedita. Magnam voluptatum omnis
+              velit aliquid harum?
+            </p>
+            <span class="headline__label content__link">
+              <span class="headline__label-link">read more</span>
+              <div class="arrow">
+                <div class="arrow__mid"></div>
+                <div class="arrow__left-side"></div>
+                <div class="arrow__right-side"></div>
               </div>
-              <p class="paragraph">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Labore, natus porro commodi architecto incidunt repudiandae
-                aliquid nostrum. Repellat eveniet impedit inventore facilis quas
-                iusto eaque. Animi cumque nam rerum aliquam iusto dolorem id
-                placeat beatae maxime accusamus esse quisquam provident ea unde
-                veritatis quod accusantium assumenda sapiente, quidem iste
-                molestiae laudantium eius, laboriosam expedita. Magnam
-                voluptatum omnis velit aliquid harum?
-              </p>
-              <span class="headline__label content__link">
-                <span class="headline__label-link">read more</span>
-                <div class="arrow">
-                  <div class="arrow__mid"></div>
-                  <div class="arrow__left-side"></div>
-                  <div class="arrow__right-side"></div>
-                </div>
-              </span>
-            </div>
+            </span>
           </div>
-
+        </div>
       </div>
     </div>
+    <footer>
+      
+    </footer>
   </body>
 </html>
