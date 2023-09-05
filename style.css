@@ -1,15 +1,38 @@
-@font-face {
-    font-family: 'playfare-c';
-    src: url(src/fonts/PlayfairDisplay-Regular.ttf)
+:root {
+    --big-size: 240px;
+    --h1-size: 88px;
+    --h2-size: 64px;
 }
 
+@font-face {
+    font-family: 'headline-color';
+    src: url(src/fonts/chronicle-display-cdnfonts/Chronicle\ Display\ Roman.otf)
+}
+
+
+@font-face {
+    font-family: 'main-color';
+    src: url(src/fonts/gilroy/Gilroy-Light.otf)
+}
+
+@font-face {
+    font-family: 'main-color-bold';
+    src: url(src/fonts/gilroy/Gilroy-ExtraBold.otf)
+}
+
+
 * {
+    font-family: 'main-color', sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     word-wrap: break-word;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+}
+
+body {
+    overflow-x: hidden;
+
 }
 
 h1,
@@ -18,15 +41,15 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'playfare-c', serif;
+    font-family: 'headline-color', serif;
 }
 
 h1 {
-    font-size: 54px;
+    font-size: var(--h1-size);
 }
 
 h2 {
-    font-size: 36px;
+    font-size: var(--h2-size);
 }
 
 .container {
@@ -42,11 +65,10 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    position: fixed;
+    position: relative;
 }
 
-.parallax::before {
+.main::before {
     z-index: 1;
     content: '';
     background: linear-gradient(330deg, rgba(11, 29, 38, 0) 30%, #0B1D26 130%);
@@ -60,8 +82,8 @@ h2 {
 .parallax__layer {
     position: fixed;
     object-fit: cover;
-    min-width: 800px;
-    width: 106%;
+    min-width: 1600px;
+    width: 102%;
     will-change: transform;
 }
 
@@ -112,8 +134,12 @@ h2 {
     color: #FBD784;
     display: flex;
     align-items: center;
-    letter-spacing: .5rem;
     margin-bottom: 20px;
+}
+
+.headline__label-text {
+    text-transform: uppercase;
+    letter-spacing: .5rem;
 }
 
 .arrow {
@@ -196,25 +222,48 @@ h2 {
 
 
 .content {
-    padding-top: 155vh;
+    /* padding-top: 155vh; */
+    margin-top: 25vh;
     color: #fff;
 }
 
 .content__block {
     display: flex;
+    margin-bottom: 10vh;
 }
 
 .content__block:nth-child(1) {
     padding-top: -300px;
 }
 
+.content__block:nth-child(2n+1) .content__info {
+    order: -1;
+}
+
 .content__info {
+    position: relative;
     padding: 10%;
+    padding-left: 100px;
     flex-basis: 60%;
+}
+
+.content__number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'main-color-bold', sans-serif;
+    font-size: var(--big-size);
+    opacity: .1;
 }
 
 .content__photo {
     flex-basis: 40%;
+    margin-right: 5%;
+}
+
+.content__block:nth-child(2n+1) .content__photo {
+    margin-right: 0;
+    margin-left: 5%;
 }
 
 .content__container::before {

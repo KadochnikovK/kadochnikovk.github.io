@@ -1,5 +1,5 @@
-const parallax = document.querySelector('.parallax')
-const parallaxLayers = parallax.querySelectorAll('.parallax__layer')
+const parallax = document.querySelectorAll('.parallax')
+const parallaxLayers = document.querySelectorAll('.parallax__layer')
 
 window.addEventListener('scroll', (e) => {
     let scrollValue = window.scrollY
@@ -14,11 +14,11 @@ window.addEventListener('scroll', (e) => {
 window.addEventListener('mousemove', (e) => {
 
     parallaxLayers.forEach(layer => {
-
+const direction = layer.hasAttribute('data-inverse') ? 1 : -1
         if (!layer.dataset.mousemove) {
             layer.style.transform = `translate(
-            ${((window.innerWidth / 2 - e.clientX) * layer.dataset.parallaxrate / 20)*(-1)}px, 
-            ${((window.innerHeight / 2 - e.clientY) * layer.dataset.parallaxrate / 20)*(-1)}px
+            ${((window.innerWidth / 2 - e.clientX) * layer.dataset.parallaxrate / 20)*direction}px, 
+            ${((window.innerHeight / 2 - e.clientY) * layer.dataset.parallaxrate / 20)*direction}px
         )`
         }
 
