@@ -2,27 +2,30 @@
     --big-size: 240px;
     --h1-size: 88px;
     --h2-size: 64px;
+    --h4-size: 22px;
+    --w-color: #fff;
+    --theme-color: #0B1D26;
 }
 
 @font-face {
-    font-family: 'headline-color';
+    font-family: 'headline-font';
     src: url(src/fonts/chronicle-display-cdnfonts/Chronicle\ Display\ Roman.otf)
 }
 
 
 @font-face {
-    font-family: 'main-color';
+    font-family: 'main-font';
     src: url(src/fonts/gilroy/Gilroy-Light.otf)
 }
 
 @font-face {
-    font-family: 'main-color-bold';
+    font-family: 'main-font-bold';
     src: url(src/fonts/gilroy/Gilroy-ExtraBold.otf)
 }
 
 
 * {
-    font-family: 'main-color', sans-serif;
+    font-family: 'main-font', sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -40,8 +43,9 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-    font-family: 'headline-color', serif;
+h6,
+.hline {
+    font-family: 'headline-font', serif;
 }
 
 h1 {
@@ -50,6 +54,65 @@ h1 {
 
 h2 {
     font-size: var(--h2-size);
+}
+/* 
+.scrollbar {
+    position: fixed;
+    height: 400px;
+    background-color: var(--w-color);
+    width: 10px;
+    opacity: .4;
+    z-index: 3;
+    border-radius: 10;
+
+} */
+
+.header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    z-index: 9;
+    color: var(--w-color);
+    padding-top: 30px;
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.menu__logo {
+    font-size: var(--h4-size);
+    width: 120px;
+}
+
+.menu__profile {
+    width: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.menu__icon {
+    padding-right: 5px;
+}
+
+.menu__items {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.menu__item {
+    text-align: center;
+    padding: 0 20px;
+}
+
+.menu__link {
+    cursor: pointer;
 }
 
 .container {
@@ -71,7 +134,7 @@ h2 {
 .main::before {
     z-index: 1;
     content: '';
-    background: linear-gradient(330deg, rgba(11, 29, 38, 0) 30%, #0B1D26 130%);
+    background: linear-gradient(330deg, rgba(11, 29, 38, 0) 30%, var(--theme-color) 130%);
     height: 100vh;
     width: 100%;
     position: absolute;
@@ -86,42 +149,6 @@ h2 {
     width: 102%;
     will-change: transform;
 }
-
-/* .parallax__img {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    right: 0;
-}
-
-.parallax-1 {
-    top: 0;
-    transform: translateZ(-9px);
-    scale: 10.1;
-}
-
-.parallax-2 {
-    top: 3000px;
-    transform: translateZ(-5px);
-    scale: 6.1;
-}
-
-.parallax-3 {
-    top: 2000px;
-    transform: translateZ(-3px);
-    scale: 4.1;
-}
-
-.parallax-4 {
-    top: 300px;
-    transform: translateZ(-4px);
-    opacity: 1;
-    scale: 5;
-}
-
-.content {
-
-} */
 
 .headline {
     max-width: 1300px;
@@ -209,7 +236,7 @@ h2 {
 }
 
 .headline__main {
-    color: #fff;
+    color: var(--w-color);
     text-align: left;
     min-width: 0;
     font-weight: 400;
@@ -224,7 +251,7 @@ h2 {
 .content {
     /* padding-top: 155vh; */
     margin-top: 25vh;
-    color: #fff;
+    color: var(--w-color);
 }
 
 .content__block {
@@ -251,7 +278,7 @@ h2 {
     position: absolute;
     top: 0;
     left: 0;
-    font-family: 'main-color-bold', sans-serif;
+    font-family: 'main-font-bold', sans-serif;
     font-size: var(--big-size);
     opacity: .1;
 }
@@ -268,7 +295,7 @@ h2 {
 
 .content__container::before {
     content: '';
-    background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);
+    background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, var(--theme-color) 61.38%);
     height: 50vh;
     width: 100%;
     position: absolute;
@@ -279,7 +306,8 @@ h2 {
 .content__container {
     position: relative;
     /* height: 1000px; */
-    background-color: #0B1D26;
+    background-color: var(--theme-color);
+    padding-bottom: 10vh;
 }
 
 .content__img {
