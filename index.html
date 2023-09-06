@@ -4,36 +4,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="description" content="On this page, you will find information about the three most famous Caucasian mountains." />
+
+    <title>Mountains</title>
 
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <script src="parallax.js" defer></script>
+    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css" />
+
+    <script src="script.js" defer></script>
   </head>
+  
   <body>
     <aside class="container">
       <div class="scrollbar"></div>
     </aside>
     <header class="header container">
-      <div class="menu">
-        <div class="menu__logo menu__link hline">Mountains</div>
-        <nav class="menu__items">
-          <div class="menu__item menu__link">Dombai</div>
-          <div class="menu__item menu__link">Arkhyz</div>
-          <div class="menu__item menu__link">Elbrus</div>
-        </nav>
-        <nav class="menu__profile">
+      <nav class="menu">
+        <div class="menu__logo link hline">Mountains</div>
+        <div class="menu__items">
+          <div class="menu__item link" id="head-arkhyz">Arkhyz</div>
+          <div class="menu__item link" id="head-dombai">Dombai</div>
+          <div class="menu__item link" id="head-elbrus">Elbrus</div>
+        </div>
+        <div class="menu__profile">
           <img class="menu__icon" src="src/img/cart.png" alt="account-icon" />
-          <div class="menu__item menu__item--no-margin menu__link">Account</div>
-        </nav>
-      </div>
+          <div class="menu__item menu__item--no-margin link">Account</div>
+        </div>
+      </nav>
     </header>
-    <section class="parallax main">
+    <section class="parallax main animated-block">
       <div
         class="parallax__layer headline container"
         style="margin-top: 25vh; z-index: 1"
@@ -41,21 +40,34 @@
         data-parallaxrate="-0.3"
         data-mousemove="false"
       >
-        <div class="headline__label">
+        <div
+          class="headline__label animated-item"
+          data-animation="fadeInUp"
+          data-delay="1"
+        >
           <div class="headline__label-line"></div>
           <span class="headline__label-text"
             >Arkhyz / Dombai / Elbrus / 2022</span
           >
         </div>
-        <h1 class="headline__main unactive">
+        <h1
+          class="headline__main animated-item"
+          data-animation="fadeInUp"
+          data-delay=".2"
+        >
           Once you have been to the mountains, you can never live without them
         </h1>
-        <span class="headline__label headline__label--white content__link">
+        <span
+          class="headline__label content__link animated-item"
+          data-animation="fadeInUp"
+          data-delay=".8"
+          id="scroll-down"
+        >
           <span class="headline__label-link">scroll down</span>
           <div class="arrow arrow--down">
-            <div class="arrow__mid arrow__mid--white"></div>
-            <div class="arrow__left-side arrow__left-side--white"></div>
-            <div class="arrow__right-side arrow__right-side--white"></div>
+            <div class="arrow__mid"></div>
+            <div class="arrow__left-side"></div>
+            <div class="arrow__right-side"></div>
           </div>
         </span>
       </div>
@@ -64,27 +76,31 @@
         alt=""
         class="parallax__layer"
         style="margin-top: -5vh"
-        data-parallaxrate=".05"
+        data-parallaxrate="-.2"
+        data-inverse
       />
       <img
         src="src/img/premid.png"
         alt=""
         class="parallax__layer"
         style="margin-top: 30vh"
-        data-parallaxrate=".06"
+        data-parallaxrate="-.18"
+        data-inverse
       />
       <img
         src="src/img/premid-2.png"
         alt=""
         class="parallax__layer"
         style="margin-top: 15vh"
-        data-parallaxrate=".065"
+        data-parallaxrate="-.15"
+        data-inverse
       />
       <img
         src="src/img/mid.png"
         alt=""
         class="parallax__layer"
-        data-parallaxrate=".07"
+        data-parallaxrate="-.13"
+        data-inverse
         style="margin-top: 20vh"
       />
       <img
@@ -106,24 +122,47 @@
 
     <div class="content">
       <div class="content__container container">
-        <section class="content__block">
+        <section class="content__block animated-block">
           <div class="content__block-item content__photo">
-            <img class="content__img" src="src/img/img_01.jpg" alt="" />
+            <img
+              class="content__img animated-item"
+              data-animation="fadeInBottomRight"
+              data-delay="0"
+              src="src/img/img_01.jpg"
+              alt=""
+            />
           </div>
           <div class="content__block-item content__info">
-           
-            <div class="headline">
-              <div class="content__number">01</div>
-              <div class="headline__label">
-                <div class="headline__label-line"></div>
-                <span class="headline__label-text">Lorem</span>
+            <div class="headline animate__animated">
+              <div
+                class="content__number animated-item"
+                data-animation="fadeInUp"
+                data-delay="0"
+              >
+                01
               </div>
-              <h2 class="headline__main">
+              <div
+                class="headline__label animated-item"
+                data-animation="fadeInUp"
+                data-delay=".8"
+              >
+                <div class="headline__label-line"></div>
+                <span class="headline__label-text">Arkhyz</span>
+              </div>
+              <h2
+                class="headline__main animated-item"
+                data-animation="fadeInUp"
+                data-delay=".2"
+              >
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Maiores, officiis!
               </h2>
             </div>
-            <p class="paragraph">
+            <p
+              class="paragraph animated-item"
+              data-animation="fadeInUp"
+              data-delay=".5"
+            >
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
               quibusdam magni expedita veritatis commodi harum modi
               consequuntur, illo delectus non tenetur, obcaecati nemo minima
@@ -137,7 +176,11 @@
               modi autem iusto. Illo delectus odio temporibus doloribus quo
               adipisci aspernatur nostrum eligendi officiis!
             </p>
-            <span class="headline__label content__link">
+            <span
+              class="headline__label content__link animated-item"
+              data-animation="fadeInUp"
+              data-delay="1"
+            >
               <span class="headline__label-link">read more</span>
               <div class="arrow">
                 <div class="arrow__mid"></div>
@@ -148,23 +191,46 @@
           </div>
         </section>
 
-        <section class="content__block">
+        <section class="content__block animated-block">
           <div class="content__block-item content__photo">
-            <img class="content__img" src="src/img/img_02.jpg" alt="" />
+            <img
+              class="content__img animated-item"
+              data-animation="fadeInBottomLeft"
+              data-delay="0"
+              src="src/img/img_02.jpg"
+              alt=""
+            />
           </div>
           <div class="content__block-item content__info">
-            
             <div class="headline">
-              <div class="content__number">02</div>
-              <div class="headline__label">
-                <div class="headline__label-line"></div>
-                <span class="headline__label-text">Lorem ipsum dolor</span>
+              <div
+                class="content__number animated-item"
+                data-animation="fadeInUp"
+                data-delay="0"
+              >
+                02
               </div>
-              <h2 class="headline__main">
+              <div
+                class="headline__label animated-item"
+                data-animation="fadeInUp"
+                data-delay=".8"
+              >
+                <div class="headline__label-line"></div>
+                <span class="headline__label-text">Dombai</span>
+              </div>
+              <h2
+                class="headline__main animated-item"
+                data-animation="fadeInUp"
+                data-delay=".2"
+              >
                 Lorem ipsum dolor sit amet consectetur.
               </h2>
             </div>
-            <p class="paragraph">
+            <p
+              class="paragraph animated-item"
+              data-animation="fadeInUp"
+              data-delay=".5"
+            >
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Consequuntur pariatur eos tenetur unde? Voluptates, quo minus.
               Iusto laborum unde quas officiis rem numquam et, delectus, saepe
@@ -176,7 +242,11 @@
               eius ab adipisci sed dolor nam reiciendis ducimus tempora, ut
               consequatur velit.
             </p>
-            <span class="headline__label content__link">
+            <span
+              class="headline__label content__link animated-item"
+              data-animation="fadeInUp"
+              data-delay="1"
+            >
               <span class="headline__label-link">read more</span>
               <div class="arrow">
                 <div class="arrow__mid"></div>
@@ -187,23 +257,46 @@
           </div>
         </section>
 
-        <section class="content__block">
+        <section class="content__block animated-block">
           <div class="content__block-item content__photo">
-            <img class="content__img" src="src/img/img_03.jpg" alt="" />
+            <img
+              class="content__img animated-item"
+              data-animation="fadeInBottomRight"
+              data-delay="0"
+              src="src/img/img_03.jpg"
+              alt=""
+            />
           </div>
           <div class="content__block-item content__info">
-       
             <div class="headline">
-              <div class="content__number">03</div>
-              <div class="headline__label">
-                <div class="headline__label-line"></div>
-                <span class="headline__label-text">Lorem ipsum</span>
+              <div
+                class="content__number animated-item"
+                data-animation="fadeInUp"
+                data-delay="0"
+              >
+                03
               </div>
-              <h2 class="headline__main">
+              <div
+                class="headline__label animated-item"
+                data-animation="fadeInUp"
+                data-delay=".8"
+              >
+                <div class="headline__label-line"></div>
+                <span class="headline__label-text">Elbrus</span>
+              </div>
+              <h2
+                class="headline__main animated-item"
+                data-animation="fadeInUp"
+                data-delay=".2"
+              >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </h2>
             </div>
-            <p class="paragraph">
+            <p
+              class="paragraph animated-item"
+              data-animation="fadeInUp"
+              data-delay=".5"
+            >
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore,
               natus porro commodi architecto incidunt repudiandae aliquid
               nostrum. Repellat eveniet impedit inventore facilis quas iusto
@@ -213,7 +306,11 @@
               laudantium eius, laboriosam expedita. Magnam voluptatum omnis
               velit aliquid harum?
             </p>
-            <span class="headline__label content__link">
+            <span
+              class="headline__label content__link animated-item"
+              data-animation="fadeInUp"
+              data-delay="1"
+            >
               <span class="headline__label-link">read more</span>
               <div class="arrow">
                 <div class="arrow__mid"></div>
@@ -225,11 +322,21 @@
         </section>
       </div>
     </div>
-    <footer class="footer">
+    <footer class="footer container">
       <nav class="footer__menu">
-        <div class="footer__item footer__right-side"></div>
-        <div class="footer__item footer__left-side"></div>
+        <div class="footer__item footer__left-side">
+          <div class="footer__logo link hline">Mountains</div>
+          <div class="footer__content">
+            Once you have been to the mountains,<br> you can never live without them
+          </div>
+        </div>
+        <div class="footer__item footer__right-side">
+          <p>Это правая сторона футера</p>
+        </div>
       </nav>
+      <div class="copywright">
+
+      </div>
     </footer>
   </body>
 </html>

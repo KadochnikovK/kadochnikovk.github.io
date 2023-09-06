@@ -2,10 +2,11 @@
     --big-size: 240px;
     --h1-size: 88px;
     --h2-size: 64px;
-    --h4-size: 22px;
-    --w-color: #fff;
+    --h4-size: 28px;
+    --w-color: #FFF;
     --theme-color: #0B1D26;
     --active-color: #FBD784;
+    --sub-color: #ADB3B6;
 }
 
 @font-face {
@@ -31,8 +32,8 @@
     margin: 0;
     box-sizing: border-box;
     word-wrap: break-word;
-    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
-    transition: all 1s;
+    will-change: transform;
+    /* scroll-behavior: smooth;   */
 }
 
 body {
@@ -88,7 +89,7 @@ h2 {
 
 .menu__logo {
     font-size: var(--h4-size);
-    width: 120px;
+    /* width: 120px; */
 }
 
 .menu__profile {
@@ -118,17 +119,17 @@ h2 {
     margin: 0;
 }
 
-.menu__link {
+.link {
     cursor: pointer;
     position: relative;
     transition: 1s;
 }
 
-.menu__link:hover {
+.link:hover {
     color: var(--active-color);
 }
 
-.menu__link::before {
+.link::before {
     content: '';
     width: 0;
     background-color: var(--active-color);
@@ -142,8 +143,7 @@ h2 {
     transition: 1s;
 }
 
-.menu__link:hover::before {
-
+.link:hover::before {
     width: 100%;
 }
 
@@ -155,7 +155,7 @@ h2 {
 
 .parallax {
     perspective: 1px;
-    height: 100vh;
+    height: 125vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -179,13 +179,13 @@ h2 {
     object-fit: cover;
     min-width: 1600px;
     width: 102%;
-    will-change: transform;
     pointer-events: none;
 }
 
 .headline {
     max-width: 1600px;
     min-width: 300px;
+    pointer-events: auto;
 }
 
 .headline__label {
@@ -204,6 +204,13 @@ h2 {
     letter-spacing: .5rem;
 }
 
+.headline__label-line {
+    height: 1px;
+    background-color: var(--active-color);
+    width: 70px;
+    margin-right: 20px;
+}
+
 .arrow {
     position: relative;
     width: 30px;
@@ -217,18 +224,19 @@ h2 {
 
 .content__link {
     cursor: pointer;
-    pointer-events: auto;
 }
 
 .content__link:hover .arrow {
     width: 70px;
 }
 
+.content__link:hover .arrow.arrow--down {
+    width: 30px;
+}
+
 .arrow__mid {
-    position: absolute;
     height: 1px;
     background-color: var(--active-color);
-    top: 50%;
     width: 28px;
     transition: 1s all;
 }
@@ -239,6 +247,10 @@ h2 {
 
 .content__link:hover .arrow__mid {
     width: 68px;
+}
+
+.content__link:hover .arrow--down .arrow__mid {
+    width: 28px;
 }
 
 .arrow__left-side {
@@ -280,6 +292,7 @@ h2 {
 .paragraph {
     margin-bottom: 30px;
     line-height: 1.8;
+    color:  var(--sub-color);
 }
 
 
@@ -292,6 +305,8 @@ h2 {
 .content__block {
     display: flex;
     margin-bottom: 10vh;
+    position: relative;
+    top: -200px;
 }
 
 .content__block:nth-child(1) {
@@ -302,23 +317,27 @@ h2 {
     order: -1;
 }
 
+.content__block:nth-last-child(1) {
+    margin-bottom: 0;
+}
+
 .content__info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
-    padding: 10%;
+    padding: 10% 10% 4% 10%;
     padding-left: 100px;
     flex-basis: 60%;
 }
 
 .content__number {
     position: absolute;
-    top: 70px;
-    left: -20px;
+    top: -130px;
+    left: -105px;
     font-family: 'main-font-bold', sans-serif;
     font-size: var(--big-size);
-    opacity: .1;
+    opacity: .1 !important;
     pointer-events: none;
 }
 
@@ -337,7 +356,7 @@ h2 {
 .content__container::before {
     content: '';
     background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, var(--theme-color) 61.38%);
-    height: 50vh;
+    height: 80vh;
     width: 100%;
     position: absolute;
     bottom: 100%;
@@ -348,7 +367,7 @@ h2 {
     position: relative;
     /* height: 1000px; */
     background-color: var(--theme-color);
-    padding-bottom: 10vh;
+    /* padding-bottom: 10vh; */
 }
 
 .content__img {
@@ -357,14 +376,45 @@ h2 {
     width: 100%;
     transition: 1s all;
     cursor: pointer;
+    position: relative;
 }
 
 .content__img:hover {
-    transform: scale(1.05);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;  
 }
 
-.unactive {
-    transform: translate(0px, 120%);
+.footer {
+    padding-bottom: 10vh;
+    background-color: var(--theme-color);
+    color: var(--w-color);
+}
+
+.footer__logo {
+    font-size: var(--h4-size);
+    width: max-content;
+    margin-bottom: 30px;
+}
+
+.footer__content {
+    line-height: 1.8;
+}
+
+.footer__menu {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer__left-side {
+    width: 60%;
+}
+
+.footer__right-side {
+    width: 40%;
+    margin-left: 5%;
+}
+
+.animate {
     opacity: 0;
-
+    visibility: hidden;
 }
+
