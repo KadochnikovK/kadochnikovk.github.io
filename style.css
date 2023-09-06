@@ -5,6 +5,7 @@
     --h4-size: 22px;
     --w-color: #fff;
     --theme-color: #0B1D26;
+    --active-color: #FBD784;
 }
 
 @font-face {
@@ -31,6 +32,7 @@
     box-sizing: border-box;
     word-wrap: break-word;
     /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    transition: all 1s;
 }
 
 body {
@@ -55,6 +57,7 @@ h1 {
 h2 {
     font-size: var(--h2-size);
 }
+
 /* 
 .scrollbar {
     position: fixed;
@@ -95,7 +98,7 @@ h2 {
 }
 
 .menu__icon {
-    padding-right: 5px;
+    margin-right: 5px;
 }
 
 .menu__items {
@@ -108,11 +111,40 @@ h2 {
 
 .menu__item {
     text-align: center;
-    padding: 0 20px;
+    margin: 0 20px;
+}
+
+.menu__item--no-margin {
+    margin: 0;
 }
 
 .menu__link {
     cursor: pointer;
+    position: relative;
+    transition: 1s;
+}
+
+.menu__link:hover {
+    color: var(--active-color);
+}
+
+.menu__link::before {
+    content: '';
+    width: 0;
+    background-color: var(--active-color);
+    position: absolute;
+    bottom: -5px;
+    z-index: 10;
+    height: 1px;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 1s;
+}
+
+.menu__link:hover::before {
+
+    width: 100%;
 }
 
 .container {
@@ -148,20 +180,23 @@ h2 {
     min-width: 1600px;
     width: 102%;
     will-change: transform;
+    pointer-events: none;
 }
 
 .headline {
-    max-width: 1300px;
+    max-width: 1600px;
     min-width: 300px;
-
-
 }
 
 .headline__label {
-    color: #FBD784;
+    color: var(--active-color);
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+}
+
+.headline__label--white {
+    color: var(--w-color);
 }
 
 .headline__label-text {
@@ -171,68 +206,67 @@ h2 {
 
 .arrow {
     position: relative;
-    display: flex;
-    width: 70px;
-    flex: 0 0 30px;
+    width: 30px;
     margin-left: 10px;
     transition: 1s all;
 }
 
+.arrow--down {
+    transform: rotate(90deg);
+}
+
 .content__link {
     cursor: pointer;
+    pointer-events: auto;
 }
 
 .content__link:hover .arrow {
-    flex: 0 0 70px;
+    width: 70px;
 }
 
 .arrow__mid {
     position: absolute;
-    display: flex;
-    flex: 0 0 30px;
     height: 1px;
-    /* margin-right: 28px; */
-    background-color: #FBD784;
+    background-color: var(--active-color);
     top: 50%;
     width: 28px;
     transition: 1s all;
 }
 
+.arrow__mid--white {
+    background-color: var(--w-color);
+}
+
 .content__link:hover .arrow__mid {
-    flex: 0 0 70px;
     width: 68px;
 }
 
 .arrow__left-side {
     position: absolute;
-    display: flex;
-    flex: 0 0 15px;
     height: 1px;
-    background-color: #FBD784;
+    background-color: var(--active-color);
     width: 12px;
     top: -4px;
     transform: rotate(45deg);
     right: 0;
 }
 
+.arrow__left-side--white {
+    background-color: var(--w-color);
+}
+
 .arrow__right-side {
     position: absolute;
-    display: flex;
-    flex: 0 0 15px;
     height: 1px;
-    background-color: #FBD784;
+    background-color: var(--active-color);
     width: 12px;
     top: 4px;
     transform: rotate(-45deg);
     right: 0;
 }
 
-.headline__label-line {
-    display: flex;
-    flex: 0 0 70px;
-    height: 1px;
-    margin-right: 20px;
-    background-color: #FBD784;
+.arrow__right-side--white {
+    background-color: var(--w-color);
 }
 
 .headline__main {
@@ -240,10 +274,11 @@ h2 {
     text-align: left;
     min-width: 0;
     font-weight: 400;
+    margin-bottom: 30px;
 }
 
 .paragraph {
-    margin: 30px 0;
+    margin-bottom: 30px;
     line-height: 1.8;
 }
 
@@ -268,6 +303,9 @@ h2 {
 }
 
 .content__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: relative;
     padding: 10%;
     padding-left: 100px;
@@ -276,16 +314,19 @@ h2 {
 
 .content__number {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 70px;
+    left: -20px;
     font-family: 'main-font-bold', sans-serif;
     font-size: var(--big-size);
     opacity: .1;
+    pointer-events: none;
 }
 
 .content__photo {
     flex-basis: 40%;
     margin-right: 5%;
+    padding: 10vh 0;
+    
 }
 
 .content__block:nth-child(2n+1) .content__photo {
@@ -314,4 +355,16 @@ h2 {
     object-fit: cover;
     height: 100%;
     width: 100%;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.content__img:hover {
+    transform: scale(1.05);
+}
+
+.unactive {
+    transform: translate(0px, 120%);
+    opacity: 0;
+
 }

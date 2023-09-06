@@ -27,27 +27,37 @@
           <div class="menu__item menu__link">Arkhyz</div>
           <div class="menu__item menu__link">Elbrus</div>
         </nav>
-        <nav class="menu__profile menu__link">
+        <nav class="menu__profile">
           <img class="menu__icon" src="src/img/cart.png" alt="account-icon" />
-          Account
+          <div class="menu__item menu__item--no-margin menu__link">Account</div>
         </nav>
       </div>
     </header>
-    <div class="parallax main">
+    <section class="parallax main">
       <div
         class="parallax__layer headline container"
         style="margin-top: 25vh; z-index: 1"
         class="parallax__layer"
-        data-parallaxrate="-.3"
+        data-parallaxrate="-0.3"
         data-mousemove="false"
       >
         <div class="headline__label">
           <div class="headline__label-line"></div>
-          <span class="headline__label-text">Dombai 2022</span>
+          <span class="headline__label-text"
+            >Arkhyz / Dombai / Elbrus / 2022</span
+          >
         </div>
-        <h1 class="headline__main">
+        <h1 class="headline__main unactive">
           Once you have been to the mountains, you can never live without them
         </h1>
+        <span class="headline__label headline__label--white content__link">
+          <span class="headline__label-link">scroll down</span>
+          <div class="arrow arrow--down">
+            <div class="arrow__mid arrow__mid--white"></div>
+            <div class="arrow__left-side arrow__left-side--white"></div>
+            <div class="arrow__right-side arrow__right-side--white"></div>
+          </div>
+        </span>
       </div>
       <img
         src="src/img/back.png"
@@ -92,17 +102,18 @@
         data-parallaxrate=".3"
         style="z-index: 2; margin-top: 60vh"
       />
-    </div>
+    </section>
 
     <div class="content">
       <div class="content__container container">
-        <div class="content__block">
+        <section class="content__block">
           <div class="content__block-item content__photo">
             <img class="content__img" src="src/img/img_01.jpg" alt="" />
           </div>
           <div class="content__block-item content__info">
-            <div class="content__number">01</div>
+           
             <div class="headline">
+              <div class="content__number">01</div>
               <div class="headline__label">
                 <div class="headline__label-line"></div>
                 <span class="headline__label-text">Lorem</span>
@@ -135,15 +146,16 @@
               </div>
             </span>
           </div>
-        </div>
+        </section>
 
-        <div class="content__block">
+        <section class="content__block">
           <div class="content__block-item content__photo">
             <img class="content__img" src="src/img/img_02.jpg" alt="" />
           </div>
           <div class="content__block-item content__info">
-            <div class="content__number">02</div>
+            
             <div class="headline">
+              <div class="content__number">02</div>
               <div class="headline__label">
                 <div class="headline__label-line"></div>
                 <span class="headline__label-text">Lorem ipsum dolor</span>
@@ -173,15 +185,16 @@
               </div>
             </span>
           </div>
-        </div>
+        </section>
 
-        <div class="content__block">
+        <section class="content__block">
           <div class="content__block-item content__photo">
             <img class="content__img" src="src/img/img_03.jpg" alt="" />
           </div>
           <div class="content__block-item content__info">
-            <div class="content__number">03</div>
+       
             <div class="headline">
+              <div class="content__number">03</div>
               <div class="headline__label">
                 <div class="headline__label-line"></div>
                 <span class="headline__label-text">Lorem ipsum</span>
@@ -209,11 +222,14 @@
               </div>
             </span>
           </div>
-        </div>
+        </section>
       </div>
     </div>
-    <footer>
-      
+    <footer class="footer">
+      <nav class="footer__menu">
+        <div class="footer__item footer__right-side"></div>
+        <div class="footer__item footer__left-side"></div>
+      </nav>
     </footer>
   </body>
 </html>
