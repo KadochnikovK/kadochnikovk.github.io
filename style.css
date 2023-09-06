@@ -42,6 +42,11 @@ body {
     background-color: var(--theme-color);
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 h1,
 h2,
 h3,
@@ -294,7 +299,7 @@ h2 {
 .paragraph {
     margin-bottom: 30px;
     line-height: 1.8;
-    color:  var(--sub-color);
+    color: var(--sub-color);
 }
 
 
@@ -347,7 +352,7 @@ h2 {
     flex-basis: 40%;
     margin-right: 5%;
     padding: 10vh 0;
-    
+
 }
 
 .content__block:nth-child(2n+1) .content__photo {
@@ -382,7 +387,7 @@ h2 {
 }
 
 .content__img:hover {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;  
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .footer {
@@ -398,9 +403,10 @@ h2 {
 }
 
 .footer__logo {
+    display: flex;
     font-size: var(--h4-size);
     width: max-content;
-    margin-bottom: 30px;
+    margin-bottom: 20px !important;
 }
 
 .footer__headline {
@@ -465,4 +471,3 @@ h2 {
     opacity: 0;
     visibility: hidden;
 }
-
