@@ -3,6 +3,7 @@
     --h1-size: 88px;
     --h2-size: 64px;
     --h4-size: 28px;
+    --h5-size: 24px;
     --w-color: #FFF;
     --theme-color: #0B1D26;
     --active-color: #FBD784;
@@ -38,7 +39,7 @@
 
 body {
     overflow-x: hidden;
-
+    background-color: var(--theme-color);
 }
 
 h1,
@@ -123,6 +124,7 @@ h2 {
     cursor: pointer;
     position: relative;
     transition: 1s;
+    width: max-content;
 }
 
 .link:hover {
@@ -389,28 +391,74 @@ h2 {
     color: var(--w-color);
 }
 
+.footer__right-side {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+}
+
 .footer__logo {
     font-size: var(--h4-size);
     width: max-content;
     margin-bottom: 30px;
 }
 
+.footer__headline {
+    color: var(--active-color);
+    font-size: var(--h5-size);
+    font-weight: bold;
+}
+
 .footer__content {
     line-height: 1.8;
+}
+
+.footer__link-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    break-inside: avoid-column;
 }
 
 .footer__menu {
     display: flex;
     flex-direction: row;
+    position: relative;
+    min-height: 300px;
 }
 
 .footer__left-side {
     width: 60%;
 }
 
+.footer__icon {
+    color: var(--w-color);
+    font-size: var(--h4-size);
+    transition: .5s;
+}
+
+.footer__icon:hover {
+    color: var(--active-color);
+}
+
 .footer__right-side {
     width: 40%;
     margin-left: 5%;
+}
+
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+
+.copywright {
+    color: var(--sub-color);
+    position: absolute;
+    margin-top: auto;
+    bottom: 0;
+    left: 0;
 }
 
 .animate {

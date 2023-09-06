@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="On this page, you will find information about the three most famous Caucasian mountains." />
+    <meta
+      name="description"
+      content="On this page, you will find information about the three most famous Caucasian mountains."
+    />
 
     <title>Mountains</title>
 
@@ -12,8 +15,13 @@
     <link rel="stylesheet" href="node_modules/animate.css/animate.min.css" />
 
     <script src="script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/19aecd2cb6.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
   </head>
-  
+
   <body>
     <aside class="container">
       <div class="scrollbar"></div>
@@ -22,13 +30,13 @@
       <nav class="menu">
         <div class="menu__logo link hline">Mountains</div>
         <div class="menu__items">
-          <div class="menu__item link" id="head-arkhyz">Arkhyz</div>
-          <div class="menu__item link" id="head-dombai">Dombai</div>
-          <div class="menu__item link" id="head-elbrus">Elbrus</div>
+          <a class="menu__item link" id="head-arkhyz">Arkhyz</a>
+          <a class="menu__item link" id="head-dombai">Dombai</a>
+          <a class="menu__item link" id="head-elbrus">Elbrus</a>
         </div>
         <div class="menu__profile">
           <img class="menu__icon" src="src/img/cart.png" alt="account-icon" />
-          <div class="menu__item menu__item--no-margin link">Account</div>
+          <a class="menu__item menu__item--no-margin link">Account</a>
         </div>
       </nav>
     </header>
@@ -55,9 +63,9 @@
           data-animation="fadeInUp"
           data-delay=".2"
         >
-          Once you have been to the mountains, you can never live without them
+          Once You Have Been To The Mountains, You Can Never Live Without Them
         </h1>
-        <span
+        <a
           class="headline__label content__link animated-item"
           data-animation="fadeInUp"
           data-delay=".8"
@@ -69,7 +77,7 @@
             <div class="arrow__left-side"></div>
             <div class="arrow__right-side"></div>
           </div>
-        </span>
+        </a>
       </div>
       <img
         src="src/img/back.png"
@@ -176,7 +184,7 @@
               modi autem iusto. Illo delectus odio temporibus doloribus quo
               adipisci aspernatur nostrum eligendi officiis!
             </p>
-            <span
+            <a
               class="headline__label content__link animated-item"
               data-animation="fadeInUp"
               data-delay="1"
@@ -187,7 +195,7 @@
                 <div class="arrow__left-side"></div>
                 <div class="arrow__right-side"></div>
               </div>
-            </span>
+            </a>
           </div>
         </section>
 
@@ -242,7 +250,7 @@
               eius ab adipisci sed dolor nam reiciendis ducimus tempora, ut
               consequatur velit.
             </p>
-            <span
+            <a
               class="headline__label content__link animated-item"
               data-animation="fadeInUp"
               data-delay="1"
@@ -253,7 +261,7 @@
                 <div class="arrow__left-side"></div>
                 <div class="arrow__right-side"></div>
               </div>
-            </span>
+            </a>
           </div>
         </section>
 
@@ -327,16 +335,32 @@
         <div class="footer__item footer__left-side">
           <div class="footer__logo link hline">Mountains</div>
           <div class="footer__content">
-            Once you have been to the mountains,<br> you can never live without them
+            Once you have been to the mountains,<br />
+            you can never live without them
           </div>
         </div>
         <div class="footer__item footer__right-side">
-          <p>Это правая сторона футера</p>
+          <div class="footer__link-group">
+            <div class="footer__headline">Links</div>
+            <a class="footer__link link" id="head-arkhyz">Arkhyz</a>
+            <a class="footer__link link" id="head-dombai">Dombai</a>
+            <a class="footer__link link" id="head-elbrus">Elbrus</a>
+          </div>
+          <div class="footer__link-group">
+            <div class="footer__headline">Follow us</div>
+            <div class="social">
+              <a href="#" class="footer__icon"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="footer__icon"><i class="fa-brands fa-vk"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="copywright">
+          Copyright &copy;
+          <script>
+            document.write(new Date().getFullYear())
+          </script>
         </div>
       </nav>
-      <div class="copywright">
-
-      </div>
     </footer>
   </body>
 </html>

@@ -1,3 +1,7 @@
+window.addEventListener('beforeunload', () => {
+    window.scrollTo(0, 0);
+});
+
 const parallax = document.querySelector('.parallax')
 const parallaxLayers = parallax.querySelectorAll('.parallax__layer')
 
@@ -76,9 +80,19 @@ scrollLink.addEventListener('click', () => {
 })
 
 const menuLinks = document.querySelectorAll('#head-arkhyz, #head-dombai, #head-elbrus')
-console.log(menuLinks)
 
 menuLinks.forEach((link, i) => {
+    link.addEventListener('click', () => {
+        const targetBlock = contentBlocks[i]
+        const topPosition = targetBlock.getBoundingClientRect().top + window.pageYOffset;
+        scrollToPosition(topPosition, 1000);
+    })
+});
+
+const footerLinks = document.querySelectorAll('#footer-arkhyz, #footer-dombai, #footer-elbrus')
+
+
+footerLinks.forEach((link, i) => {
     link.addEventListener('click', () => {
         const targetBlock = contentBlocks[i]
         const topPosition = targetBlock.getBoundingClientRect().top + window.pageYOffset;
