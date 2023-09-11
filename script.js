@@ -24,8 +24,6 @@ window.addEventListener('mousemove', (e) => {
     })
 })
 
-
-
 const animatedBlocks = document.querySelectorAll('.animated-block');
 
 const isElementInViewport = (element) => {
