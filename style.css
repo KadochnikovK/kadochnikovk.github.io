@@ -12,18 +12,18 @@
 
 @font-face {
     font-family: 'headline-font';
-    src: url(/src/fonts/chronicle-display-cdnfonts/Chronicle\ Display\ Roman.otf)
+    src: url(src/fonts/chronicle-display-cdnfonts/Chronicle\ Display\ Roman.otf)
 }
 
 
 @font-face {
     font-family: 'main-font';
-    src: url(/src/fonts/gilroy/Gilroy-Light.otf)
+    src: url(src/fonts/gilroy/Gilroy-Light.otf)
 }
 
 @font-face {
     font-family: 'main-font-bold';
-    src: url(/src/fonts/gilroy/Gilroy-ExtraBold.otf)
+    src: url(src/fonts/gilroy/Gilroy-ExtraBold.otf)
 }
 
 
